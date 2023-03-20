@@ -1,24 +1,68 @@
-# README
+# This is a pizza-restaurant API project that implements the use of Ruby on Rails in building custom apis.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The pizza-restaurant is a simple custom web API where you can make CRUD requests to the server in implementing a Pizza-Restaurant Application.
 
-Things you may want to cover:
+# Ruby version
+  * Ruby~v2.7.+
 
-* Ruby version
+# How to Use the API
 
-* System dependencies
+Clone the repo,
+'git clone https://github.com/aketchgithub/restaurant-pizza-api'
 
-* Configuration
+cd pizzas-restaurant
 
-* Database creation
+* Install the required dependencies using bundle;
 
-* Database initialization
+'bundle install'
 
-* How to run the test suite
+Create migrations with rails
 
-* Services (job queues, cache servers, search engines, etc.)
+rails db:migrate
 
-* Deployment instructions
+If you would like to use the seed data
+(*Be sure to uncomment the code in the seeds.rb file)
 
-* ...
+rails db:seed
+
+*Start the server
+
+rails s  
+
+# Example Relationships within the database
+
+Pizza
+.has_many :restaurant_pizzas
+ .has_many :restaurants, through: :restaurant_pizzas
+
+Restaurant
+. has_many :restaurant_pizzas
+. has_many :pizzas, through: :restaurant_pizzas
+
+Restaurant_pizza
+. belongs_to :restaurant
+. belongs_to :pizza 
+
+# Requests You can make with the API
+
+. Pizzas
+You can make all CRUD requests for the user using the endpoint;
+
+http://localhost:3000/pizzas
+
+. GET/RETRIEVE all pizzas
+. SHOW specific pizza_by[:id]
+. GET/RETRIEVE individual pizza
+. DELETE a pizza
+. UPDATE pizza(pizza_columns)
+
+. Restaurant
+
+You can make all CRUD requests for the restaurant database.
+
+http://localhost:3000/restaurants
+
+. CREATE pizza restaurant
+. GET/RETRIEVE all restaurants
+. DELETE a restaurant
+. UPDATE a restaurant
