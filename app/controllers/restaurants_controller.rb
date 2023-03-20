@@ -3,4 +3,8 @@ class RestaurantsController < ApplicationController
         restaurants = Restaurant.all 
         render json: restaurants.as_json(only: [:id, :name, :address])
     end
+
+    # private
+
+    # def 
 end
