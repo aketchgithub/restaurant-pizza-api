@@ -1,5 +1,14 @@
 class RestaurantPizzasController < ApplicationController
-
+    def index
+        restaurant_pizzas = RestaurantPizza.includes(:pizza, :restaurant).all
+    
+        render json: restaurant_pizzas.to_json(
+          include: {
+            pizza: { only: [:id, :name, :ingredients] },
+            restaurant: { only: [:id, :name, :address] }
+          }
+        )
+    end
 
     def create
         restaurant_pizza = RestaurantPizza.new(restaurant_pizza_params)
