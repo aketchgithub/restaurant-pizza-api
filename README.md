@@ -6,6 +6,7 @@ The pizza-restaurant is a simple custom web API where you can make CRUD requests
   * Ruby~v2.7.+
 
 # How to Use the API
+The following steps should get you up and running with pizza-restaurant api;
 
 Clone the repo,
 'git clone https://github.com/aketchgithub/restaurant-pizza-api'
@@ -21,13 +22,16 @@ Create migrations with rails
 rails db:migrate
 
 If you would like to use the seed data
-(*Be sure to uncomment the code in the seeds.rb file)
 
 rails db:seed
 
 *Start the server
 
 rails s  
+
+or 
+
+rails server
 
 # Example Relationships within the database
 
@@ -48,7 +52,7 @@ Restaurant_pizza
 . Pizzas
 You can make all CRUD requests for the user using the endpoint;
 
-http://localhost:3000/pizzas
+https://pizzas-restaurant-api.onrender.com/pizzas
 
 . GET/RETRIEVE all pizzas
 . SHOW specific pizza_by[:id]
@@ -60,9 +64,11 @@ http://localhost:3000/pizzas
 
 You can make all CRUD requests for the restaurant database.
 
-http://localhost:3000/restaurants
+https://pizzas-restaurant-api.onrender.com/restaurants
 
 . CREATE pizza restaurant
 . GET/RETRIEVE all restaurants
 . DELETE a restaurant
 . UPDATE a restaurant
+
+(When running the api endpoint locally, use http://localhost/PORTNAME/API ENDPOINT, for your requests.
