@@ -4,7 +4,7 @@ class RestaurantPizzasController < ApplicationController
     
         render json: restaurant_pizzas.to_json(
           include: {
-            pizza: { only: [:id, :name, :ingredients] },
+            pizza: { only: [:id, :name, :ingredients, :price] },
             restaurant: { only: [:id, :name, :address] }
           }
         )
