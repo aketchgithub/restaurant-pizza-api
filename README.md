@@ -25,6 +25,8 @@ If you would like to use the seed data
 
 rails db:seed
 
+The project should be available locally now;
+
 *Start the server
 
 rails s  
@@ -52,7 +54,7 @@ Restaurant_pizza
 . Pizzas
 You can make all CRUD requests for the user using the endpoint;
 
-https://pizzas-restaurant-api.onrender.com/pizzas
+https://pizzas-restaurant-api-dqbw.onrender.com/pizzas
 
 . GET/RETRIEVE all pizzas
 . SHOW specific pizza_by[:id]
@@ -64,7 +66,7 @@ https://pizzas-restaurant-api.onrender.com/pizzas
 
 You can make all CRUD requests for the restaurant database.
 
-https://pizzas-restaurant-api.onrender.com/restaurants
+https://pizzas-restaurant-api-dqbw.onrender.com/restaurants
 
 . CREATE pizza restaurant
 . GET/RETRIEVE all restaurants
